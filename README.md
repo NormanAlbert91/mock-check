@@ -4,8 +4,23 @@ A PHPStan plugin to forbid mocking specific interfaces or classes.
 
 ## Installation
 
+Add the repository to your `composer.json`:
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:your-user/mock-check.git"
+        }
+    ]
+}
+```
+
+Then install the package:
+
 ```bash
-composer require --dev na/mock-check
+composer require --dev na/mock-check:dev-main
 ```
 
 If you use [phpstan/extension-installer](https://github.com/phpstan/extension-installer), the plugin is automatically registered. Otherwise, add to your `phpstan.neon`:
