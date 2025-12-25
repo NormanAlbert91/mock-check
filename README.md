@@ -11,7 +11,7 @@ Add the repository to your `composer.json`:
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:your-user/mock-check.git"
+            "url": "git@github.com:NormanAlbert91/mock-check.git"
         }
     ]
 }
