@@ -1,0 +1,21 @@
+parameters:
+    mockCheck:
+        forbiddenPatterns: []
+
+parametersSchema:
+    mockCheck: structure([
+        forbiddenPatterns: listOf(
+            structure([
+                pattern: string()
+                message: schema(string(), nullable())
+            ])
+        )
+    ])
+
+services:
+    -
+        class: Na\MockCheck\Rules\ForbiddenMockRule
+        arguments:
+            forbiddenPatterns: %mockCheck.forbiddenPatterns%
+        tags:
+            - phpstan.rules.rule
